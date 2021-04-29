@@ -1,30 +1,33 @@
 {% extends '_templates/base.njk' %}
 
-{% block page_title %}Index page title{% endblock %}
+{% block page_title %}Queen{% endblock %}
 
-{% block page_description %}The index search description for this page goes here.{% endblock %}
+{% block page_description %}A website for the band Queen using the original members and studio albums.{% endblock %}
 
 {% block content %}
+<div class="jumbotron banner">
+  <img src="img/queen-logo-white.png" alt="Queen Logo">
+  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in facilisis velit, aliquam congue dui. Mauris id mi quam. Nam enim leo, bibendum vel efficitur id, elementum malesuada est. Pellentesque interdum tempus eros nec iaculis. Quisque ac est dictum, vehicula nulla quis, condimentum dui.</p>
+</div>
+
 <div class="container">
-  <h1>Main headline here</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in facilisis velit, aliquam congue dui. Mauris id mi quam. Nam enim leo, bibendum vel efficitur id, elementum malesuada est. Pellentesque interdum tempus eros nec iaculis. Quisque ac est dictum, vehicula nulla quis, condimentum dui.</p>
-  <h2>Library books loop</h2>
-  <p>This loops through data that came from a Google Docs example.</p>
+
+  <h2>Queen Members</h2>
+  
   <div class="row">
-    {% for book in library.books %}
-      <div class="col">
-        <img src="img/{{ book.slug }}.jpg" alt="" class="img-fluid">
-        <h3><a href="books/{{ book.slug }}.html">{{ book.title }}</a></h3>
+    {% for member in queen.members %}
+    <div class="col-sm-6 col-lg-3">
+      <div class="card mb-4 text-center">
+        <!-- add css later where the image is b&w and turns color on hover? -->
+        <img src="img/members/{{ member.image }}" class="card-img-top" alt="{{ member.name }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ member.name }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ member.instruments }}</h6>
+          <a href="members/{{ member.slug }}.html" class="card-link text-danger">Learn More</a>
+        </div>
       </div>
+    </div>
     {% endfor %}
   </div>
-  <h2>Bookstores loop</h2>
-  <p>This loops through data that came from a Google Sheet example.</p>
-  <hr>
-  {% for store in bookstores.stores %}
-    <h3><a href="{{ store.url }}" target="_blank">{{ store.name }}</a></h3>
-    <p>{{ store.address}}, {{ store.city }}, {{ store.state }} {{ store.zip }}</p>
-    <hr>
-  {% endfor %}
 </div>
 {% endblock %}

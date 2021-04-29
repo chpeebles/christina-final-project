@@ -1,0 +1,16 @@
+.jumbotron.banner {
+  background: url(../img/queen-live-on-stage.jpg) no-repeat center;
+  background-size: cover;
+  color: white;
+  padding-top: 12rem
+}
+
+.jumbotron {
+  margin-bottom: 50px;
+  text-align: center;
+
+  img {
+    width: 400px;
+    margin-bottom: 20px;
+  }
+}
