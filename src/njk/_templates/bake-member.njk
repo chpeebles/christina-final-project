@@ -7,16 +7,19 @@
 {% block page_description %}{{ name }}{% endblock %}
 
 {% block content %}
-  <article class="container">
+  <article class="container member-container">
     <div class="row">
       <div class="col-sm-4">
-          <img src="../img/members/{{ image }}" alt="" class="img-fluid mb-4">
+        <img src="../img/members/{{ image }}" alt="" class="img-fluid mb-4">
       </div>
       <div class="col-sm-8">
-          <h1>{{ name }}</h1>
-          <h3>{{ instruments }} | {{ tenure }}</h3>
-          <h6>Born {{birthdate}} | {{ birthplace }}</h6>
-          <p>{{ description | safe }}</p>
+        <h1>{{ name }}</h1>
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-primary">{{ instruments }} {{ tenure }}</li>
+          <li class="list-group-item list-group-item-primary">Born {{birthdate}} in {{ birthplace }}</li>
+          <li class="list-group-item">{{ description | safe }}</li>
+        </ul>
+        <!--<p>{{ description | safe }}</p>-->
       </div>
     </div>
   </article>

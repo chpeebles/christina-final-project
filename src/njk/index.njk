@@ -1,14 +1,12 @@
 {% extends '_templates/base.njk' %}
 
-{% block page_title %}Queen{% endblock %}
+{% block page_title %}Queen | Home{% endblock %}
 
 {% block page_description %}A website for the band Queen using the original members and studio albums.{% endblock %}
 
 {% block content %}
-<div class="jumbotron banner">
-  <img src="img/queen-logo-white.png" alt="Queen Logo">
-  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in facilisis velit, aliquam congue dui. Mauris id mi quam. Nam enim leo, bibendum vel efficitur id, elementum malesuada est. Pellentesque interdum tempus eros nec iaculis. Quisque ac est dictum, vehicula nulla quis, condimentum dui.</p>
-</div>
+
+{% include "_includes/jumbotron.njk" %}
 
 <div class="container">
 
@@ -17,15 +15,18 @@
   <div class="row">
     {% for member in queen.members %}
     <div class="col-sm-6 col-lg-3">
-      <div class="card mb-4 text-center">
-        <!-- add css later where the image is b&w and turns color on hover? -->
-        <img src="img/members/{{ member.image }}" class="card-img-top" alt="{{ member.name }}">
-        <div class="card-body">
-          <h5 class="card-title">{{ member.name }}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">{{ member.instruments }}</h6>
-          <a href="members/{{ member.slug }}.html" class="card-link text-danger">Learn More</a>
+      <!--<a href="members/{{ member.slug }}.html" class="card-link text-danger">-->
+        <div class="card card-member mb-4 text-center">
+          <img class="card-img-top" src="img/members/{{ member.image }}" alt="{{ member.name }}">
+
+          <!--<div class="card-img-overlay d-flex align-items-end">-->
+          <div class="card-body">
+            <h3 class="card-title">{{ member.name }}</h3>
+            <h6 class="card-subtitle mb-2 text-muted">{{ member.instruments }}</h6>
+            <a href="members/{{ member.slug }}.html" class="card-link text-primary">Learn More</a>
+          </div>
         </div>
-      </div>
+      <!--</a>-->
     </div>
     {% endfor %}
   </div>
