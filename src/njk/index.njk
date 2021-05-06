@@ -10,25 +10,25 @@
 
 <div class="container">
 
-  <h2>Queen Members</h2>
+  <h5 class="text-center">Interested in all things Queen? You're in the right place! Here you can learn more about Queen's band members and view all of their discography at a glance.</h5>
+
+  <h2>Explore Queen's Members</h2>
   
   <div class="row">
     {% for member in queen.members %}
     <div class="col-sm-6 col-lg-3">
-      <!--<a href="members/{{ member.slug }}.html" class="card-link text-danger">-->
+      <a href="members/{{ member.slug }}.html" class="card-link text-white">
         <div class="card card-member mb-4 text-center">
           <img class="card-img-top" src="img/members/{{ member.image }}" alt="{{ member.name }}">
 
-          <!--<div class="card-img-overlay d-flex align-items-end">-->
-          <div class="card-body">
-            <h3 class="card-title">{{ member.name }}</h3>
-            <h6 class="card-subtitle mb-2 text-muted">{{ member.instruments }}</h6>
-            <a href="members/{{ member.slug }}.html" class="card-link text-primary">Learn More</a>
+          <div class="card-img-overlay d-flex align-items-end">
+            <h1 class="card-title">{{ member.name }}</h1>
           </div>
         </div>
-      <!--</a>-->
+      </a>
     </div>
     {% endfor %}
   </div>
+  <br>
 </div>
 {% endblock %}

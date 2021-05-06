@@ -38,3 +38,26 @@ h2 {
 h3 {
   font-size: 1.5rem;
 }
+
+/* Discography page, make this it's own scss file later :-) */
+.card-album {
+  background: black;
+  overflow: hidden;
+
+  img {
+    opacity: 1;
+  }
+  .card-album-text {
+    opacity: 0;
+  }
+}
+
+.card-album:hover {
+  img {
+    opacity: 0.2;
+  }
+
+  .card-album-text {
+    opacity: 1;
+  }
+}

@@ -12,14 +12,15 @@
       <div class="col-sm-4">
         <img src="../img/members/{{ image }}" alt="" class="img-fluid mb-4">
       </div>
-      <div class="col-sm-8">
+      <div class="col-sm-8 band-member">
         <h1>{{ name }}</h1>
         <ul class="list-group">
-          <li class="list-group-item list-group-item-primary">{{ instruments }} {{ tenure }}</li>
-          <li class="list-group-item list-group-item-primary">Born {{birthdate}} in {{ birthplace }}</li>
+          <strong>
+            <li class="list-group-item list-group-item-warning text-dark">{{ instruments }} {{ tenure }}</li>
+            <li class="list-group-item list-group-item-warning text-dark">Born {{birthdate}} in {{ birthplace }}</li>
+          </strong>
           <li class="list-group-item">{{ description | safe }}</li>
         </ul>
-        <!--<p>{{ description | safe }}</p>-->
       </div>
     </div>
   </article>

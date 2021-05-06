@@ -2,3 +2,22 @@
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
+.band-member > h1{
+  font-size: 3.5em;
+}
+
+.card-member {
+  background: black;
+  overflow: hidden;
+
+  img {
+    opacity: 0.5;
+  }
+}
+
+.card-member:hover {
+  img {
+    opacity: 1;
+  }
+}
