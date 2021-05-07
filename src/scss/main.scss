@@ -22,42 +22,22 @@
 @import "nav";
 @import "jumbotron";
 @import "members";
+@import "discography";
 
 h1 {
-  font-family: 'Cinzel', serif;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: bolder;
 }
 
 h2 {
   margin-top: 50px;
-  font-size: 3em;
+  font-size: 4em;
   text-align: center;
   margin-bottom: 30px;
-  font-family: 'Cinzel', serif;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 h3 {
   font-size: 1.5rem;
-}
-
-/* Discography page, make this it's own scss file later :-) */
-.card-album {
-  background: black;
-  overflow: hidden;
-
-  img {
-    opacity: 1;
-  }
-  .card-album-text {
-    opacity: 0;
-  }
-}
-
-.card-album:hover {
-  img {
-    opacity: 0.2;
-  }
-
-  .card-album-text {
-    opacity: 1;
-  }
 }

@@ -3,8 +3,15 @@
   margin-bottom: 50px;
 }
 
-.band-member > h1{
+#card-member-name {
   font-size: 3.5em;
+}
+
+.band-member {
+  h1 {
+    font-size: 5em;
+    margin-bottom: 0.25em;
+  }
 }
 
 .card-member {
